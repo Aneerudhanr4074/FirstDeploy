@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Design Patterns Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Design Patterns MCQ</h1>
+    <p class="tagline">Creational & Behavioral patterns — pick a set, answer, submit, see your score.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="field-row">
+        <label for="studentName">Your Name</label>
+        <input id="studentName" type="text" placeholder="e.g., Priya Sharma" />
+      </div>
+
+      <div class="field-row">
+        <label for="setSelect">Choose Set</label>
+        <select id="setSelect">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <div class="field-row">
+        <label><input id="shuffleToggle" type="checkbox" checked /> Shuffle questions</label>
+      </div>
+
+      <div class="actions">
+        <button id="startBtn">Start Quiz</button>
+        <button id="resetBtn" class="secondary" disabled>Reset</button>
+      </div>
+    </section>
+
+    <section id="quizSection" class="card hidden">
+      <div id="quizMeta" class="quiz-meta"></div>
+      <div id="questionsContainer" class="questions"></div>
+      <div class="actions">
+        <button id="submitBtn">Submit</button>
+      </div>
+    </section>
+
+    <section id="resultSection" class="card hidden">
+      <h2>Your Result</h2>
+      <p id="scoreLine"></p>
+      <details>
+        <summary>Review Answers</summary>
+        <div id="reviewContainer"></div>
+      </details>
+      <div id="saveStatus" class="save-status"></div>
+      <div class="actions">
+        <button id="newAttemptBtn" class="secondary">New Attempt</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for teaching — deployable on Netlify. Edit <code>questions.js</code> to add/modify questions.</p>
+  </footer>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
